@@ -5,7 +5,6 @@ export declare class TodoService {
     private todoRepository;
     private configService;
     constructor(todoRepository: Repository<Todo>, configService: ConfigService);
-    getHello(): string;
     findAll(): Promise<Todo[]>;
     findOneBy(id: string): Promise<Todo>;
     add(todo: Todo): Promise<void>;

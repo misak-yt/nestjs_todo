@@ -6,7 +6,6 @@ import { Todo } from './todo.entity';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  // imports: [TypeOrmModule.forFeature([Todo])],
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forFeature([Todo]),

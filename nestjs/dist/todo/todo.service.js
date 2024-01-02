@@ -23,10 +23,6 @@ let TodoService = class TodoService {
         this.todoRepository = todoRepository;
         this.configService = configService;
     }
-    getHello() {
-        console.log(this.configService.get('DATABASE_HOST'), this.configService.get('DATABASE_DB'));
-        return 'Hello World!';
-    }
     async findAll() {
         return await this.todoRepository.find();
     }

@@ -14,11 +14,6 @@ import { Todo } from './todo.entity';
 export class TodoController {
   constructor(private todoService: TodoService) {}
 
-  @Get('hello')
-  getHello(): string {
-    return this.todoService.getHello();
-  }
-
   @Get()
   async findAll(): Promise<Todo[]> {
     return await this.todoService.findAll();

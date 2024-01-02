@@ -20,9 +20,6 @@ let TodoController = class TodoController {
     constructor(todoService) {
         this.todoService = todoService;
     }
-    getHello() {
-        return this.todoService.getHello();
-    }
     async findAll() {
         return await this.todoService.findAll();
     }
@@ -40,12 +37,6 @@ let TodoController = class TodoController {
     }
 };
 exports.TodoController = TodoController;
-__decorate([
-    (0, common_1.Get)('hello'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], TodoController.prototype, "getHello", null);
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),

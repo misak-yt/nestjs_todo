@@ -12,14 +12,6 @@ export class TodoService {
     private configService: ConfigService,
   ) {}
 
-  getHello(): string {
-    console.log(
-      this.configService.get('DATABASE_HOST'),
-      this.configService.get('DATABASE_DB'),
-    );
-    return 'Hello World!';
-  }
-
   async findAll(): Promise<Todo[]> {
     return await this.todoRepository.find();
   }
