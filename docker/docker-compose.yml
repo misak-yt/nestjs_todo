@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  mysql:
+    build: .
+    restart: always
+    environment:
+      MYSQL_DATABASE: todo
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpw
+    ports:
+      - "3307:3306"
+    volumes:
+      - "db_data:/var/lib/mysql"
+    networks:
+      - db_network
+
+volumes:
+  db_data:
+
+networks:
+  db_network:
+    driver: bridge
